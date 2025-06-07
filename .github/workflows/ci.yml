@@ -21,5 +21,6 @@ jobs:
                mkdocs-material \
                mkdocs-material-extensions \
                pymdown-extensions \
+               mkdocs-mermaid2-plugins
                mkdocs-video
       - run: mkdocs gh-deploy --force
