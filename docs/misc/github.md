@@ -9,3 +9,11 @@ git branch -M main
 git remote add origin https://github.com/EZhu2012/wn4k.git
 git push -u origin main
 ```
+
+### Check in the changes
+
+```bash
+git add <filename>
+git commit -m "<description>"
+git push
+```
