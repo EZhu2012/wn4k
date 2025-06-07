@@ -1,0 +1,52 @@
+site_name: Multi-language News for Kids
+
+nav:
+  - 'Home': index.md
+  - 'Project':
+    - 'Design': project/design.md
+    - 'Tools': project/tools.md
+  - 'Misc':
+    - 'Mkdocs': misc/mkdocs.md
+
+theme:
+  name: readthedocs
+  language: en
+  highlightjs: true
+  hljs_languages:
+    - yaml
+  prev_next_buttons_location: none
+  feature:
+    - navigation.instant
+    - content.tabs.link
+
+extra_css:
+  - extra.css
+
+plugins:
+  - search
+  - mermaid2:
+      version: 9.4.3
+      arguments:
+        theme: default
+        startOnLoad: true
+        securityLevel: 'loose'
+
+markdown_extensions:
+  - toc:
+      permalink: 
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji 
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - https://unpkg.com/mermaid@9.4.3/dist/mermaid.min.js
+  - js/init-mermaid.js
